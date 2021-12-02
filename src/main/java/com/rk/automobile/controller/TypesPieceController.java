@@ -27,8 +27,8 @@ public class TypesPieceController {
             return ResponseEntity.ok("Le champs code du type de pièce ne peut être vide.");
         } else if (Validation.isEmpty(typesPieceModel.getRefConstructeur())) {
             return ResponseEntity.ok("Le champs nom du type de pièce ne peut être vide.");
-        } else if (Validation.isNotYear(Integer.toString(typesPieceModel.getPrix()))) {
-            return ResponseEntity.ok("Le champs année du type de pièce doit contenir quatre chiffre.");
+        } else if (Validation.isNotPrice(Integer.toString(typesPieceModel.getPrix()))) {
+            return ResponseEntity.ok("Le champs prix du type de pièce doit contenir des chiffres.");
         } else if (Validation.isEmpty(typesPieceModel.getCodeCategorie())){
             return ResponseEntity.ok("Le champs codeCategorie du type de pièce doit contenir le code d'une marque.");
         } else {
